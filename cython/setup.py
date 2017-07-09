@@ -17,15 +17,17 @@ setup(
         libraries=[
             'opencv_core',
             'opencv_videoio',
-            'opencv_highgui'
+            'opencv_highgui',
+            'opencv_imgproc'
         ],
         language="c++",
-        extra_link_args=['-L/usr/lib/x86_64-linux-gnu/'],
+        extra_link_args=['-L/usr/lib/x86_64-linux-gnu/', '-g'],
         include_dirs=[
             np.get_include(),
             '/usr/include/opencv2',
             '/usr/include/opencv',
+            '.',
         ],
-        extra_compile_args=["-w"]
+        extra_compile_args=["-w", '-g'],
     )]
 )
